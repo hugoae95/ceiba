@@ -43,6 +43,7 @@ class ViewController: UIViewController {
     }
     
     func loadData() -> Bool{
+        
         do{
             self.users = try context.fetch(Users.fetchRequest())
             self.totalUsers = self.users
@@ -51,7 +52,6 @@ class ViewController: UIViewController {
                 print("cargo datos")
                 DispatchQueue.main.async {
                     self.tableView.reloadData()
-                    self.utility.removeSpinner()
                 }
                 return true
             }else{
@@ -99,19 +99,22 @@ class ViewController: UIViewController {
             }
                     
             do {
-        
+                
                 let users:[User] =  try JSONDecoder().decode([User].self, from: data! )
                 self.saveUsers(data: users)
                 
+                DispatchQueue.main.async {
+                    self.utility.removeSpinner()
+                }
+                
             } catch {
                 print("Error during JSON serialization: \(error.localizedDescription)")
-                DispatchQueue.main.async {
-                    self.utility.alert(viewController: self, title: "Usuarios", message: "Ocurrio un problema cargando la información, intentalo luego.")
-                }
             }
+            
                     
         })
         task.resume()
+        
         
     }
     
