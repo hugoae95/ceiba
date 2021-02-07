@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="customCell" rowHeight="143" id="KGk-i7-Jjw" customClass="TableViewCell" customModule="ceiba" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="143"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="143"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Nombre" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KQr-5Z-1Pq">
+                        <rect key="frame" x="16" y="17" width="288" height="21"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Teléfono" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZiV-Q1-DEZ">
+                        <rect key="frame" x="16" y="47" width="288" height="21"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Correo" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GQn-e1-vbb">
+                        <rect key="frame" x="16" y="75" width="288" height="21"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AQ3-Ym-1LS">
+                        <rect key="frame" x="155" y="104" width="149" height="30"/>
+                        <state key="normal" title="VER PUBLICACIONES"/>
+                    </button>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="trailing" secondItem="AQ3-Ym-1LS" secondAttribute="trailing" constant="16" id="7GY-V9-1eS"/>
+                    <constraint firstItem="KQr-5Z-1Pq" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="17" id="DQO-he-ivp"/>
+                    <constraint firstAttribute="trailing" secondItem="KQr-5Z-1Pq" secondAttribute="trailing" constant="16" id="JUQ-JH-hZZ"/>
+                    <constraint firstItem="GQn-e1-vbb" firstAttribute="trailing" secondItem="H2p-sc-9uM" secondAttribute="trailingMargin" id="P5J-7L-jZf"/>
+                    <constraint firstItem="GQn-e1-vbb" firstAttribute="top" secondItem="ZiV-Q1-DEZ" secondAttribute="bottom" constant="7" id="a1m-vE-b4G"/>
+                    <constraint firstItem="GQn-e1-vbb" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" id="aYY-Gq-LwB"/>
+                    <constraint firstItem="ZiV-Q1-DEZ" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="16" id="eZV-k2-toQ"/>
+                    <constraint firstAttribute="bottom" secondItem="AQ3-Ym-1LS" secondAttribute="bottom" constant="9" id="k9G-Uw-5MC"/>
+                    <constraint firstItem="KQr-5Z-1Pq" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="16" id="m8D-Jy-ppO"/>
+                    <constraint firstItem="ZiV-Q1-DEZ" firstAttribute="top" secondItem="KQr-5Z-1Pq" secondAttribute="bottom" constant="9" id="nkO-fd-XUi"/>
+                    <constraint firstItem="AQ3-Ym-1LS" firstAttribute="top" secondItem="GQn-e1-vbb" secondAttribute="bottom" constant="8" symbolic="YES" id="oyy-7K-NVU"/>
+                    <constraint firstAttribute="trailing" secondItem="ZiV-Q1-DEZ" secondAttribute="trailing" constant="16" id="raG-Hf-gcE"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="mail" destination="GQn-e1-vbb" id="xZl-x7-KMf"/>
+                <outlet property="name" destination="KQr-5Z-1Pq" id="eyJ-eI-Z7Y"/>
+                <outlet property="phone" destination="ZiV-Q1-DEZ" id="PHm-nx-SI7"/>
+                <outlet property="viewMore" destination="AQ3-Ym-1LS" id="Rx8-TB-fPB"/>
+            </connections>
+            <point key="canvasLocation" x="137.68115942028987" y="132.92410714285714"/>
+        </tableViewCell>
+    </objects>
+</document>
